@@ -1,3 +1,3 @@
-#provider "aws" {
-#  region = gion
-#}
+provider "aws" {
+  region = gion
+}
