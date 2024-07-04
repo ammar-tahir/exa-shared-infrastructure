@@ -38,6 +38,6 @@ jobs:
         id: plan
         run: terraform plan -no-color
 
-        if: github.ref == 'refs/heads/master'
       - name: Terraform Apply
+        if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
