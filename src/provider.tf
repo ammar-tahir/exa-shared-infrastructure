@@ -1,3 +1,3 @@
 provider "aws" {
-  region = gion
+  region = var.region
 }
