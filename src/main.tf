@@ -15,12 +15,10 @@ terraform {
       version = ">= 0.9"
     }
   }
-}
 
-terraform {
   backend "s3" {
     bucket = "exa-tfstates"
-    key    = "path/to/my/key"
+    key    = "state/terraform.tfstate"
     region = var.region
   }
 }
