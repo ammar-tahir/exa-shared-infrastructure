@@ -5,20 +5,20 @@ module "eks" {
   cluster_name    = "exa-shared-cluster"
   cluster_version = "1.30"
 
-  cluster_endpoint_public_access  = true
+  cluster_endpoint_public_access = true
 
   cluster_addons = {
-    coredns                = {
-        most_recent = true
+    coredns = {
+      most_recent = true
     }
     eks-pod-identity-agent = {
-        most_recent = true
+      most_recent = true
     }
-    kube-proxy             = {
-        most_recent = true
+    kube-proxy = {
+      most_recent = true
     }
-    vpc-cni                = {
-        most_recent = true
+    vpc-cni = {
+      most_recent = true
     }
   }
 
@@ -32,7 +32,7 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-    exa-shared-worker-group = {
+    exa-shared-wg = {
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
       ami_type       = "AL2023_x86_64_STANDARD"
       instance_types = ["m5.xlarge"]
