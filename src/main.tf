@@ -1,9 +1,19 @@
 terraform {
-  required_version = ">=3.64.0"
+  required_version = ">=1.3.2"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.40"
+      region  = var.region
+    }
+    tls = {
+      source  = "hashicorp/tls"
+      version = ">= 3.0"
+    }
+    time = {
+      source  = "hashicorp/time"
+      version = ">= 0.9"
     }
   }
 }
