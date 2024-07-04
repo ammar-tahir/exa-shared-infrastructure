@@ -23,7 +23,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 3.64.0
+          terraform_version: 1.0.1
           terraform_wrapper: false
 
       - name: Terraform Format
@@ -38,6 +38,6 @@ jobs:
         id: plan
         run: terraform plan -no-color
 
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
       - name: Terraform Apply
         run: terraform apply -auto-approve
