@@ -5,20 +5,20 @@ module "eks" {
   cluster_name    = "exa-shared-cluster"
   cluster_version = "1.30"
 
-  cluster_endpoint_public_access  = true
+  cluster_endpoint_public_access = true
 
   cluster_addons = {
-    coredns                = {
-        most_recent = true
+    coredns = {
+      most_recent = true
     }
     eks-pod-identity-agent = {
-        most_recent = true
+      most_recent = true
     }
-    kube-proxy             = {
-        most_recent = true
+    kube-proxy = {
+      most_recent = true
     }
-    vpc-cni                = {
-        most_recent = true
+    vpc-cni = {
+      most_recent = true
     }
   }
 
